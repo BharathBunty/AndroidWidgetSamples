@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.bharath.androidwidgetsamples.R
 import com.bharath.androidwidgetsamples.databinding.FragmentTeamDetailBinding
+import com.squareup.picasso.Picasso
 
 /**
  * A simple [Fragment] subclass.
@@ -54,7 +55,7 @@ class TeamDetailFragment : Fragment() {
         val position = requireArguments().getInt(ARG_POSITION)
 
         with(binding){
-            teamImageView.setImageResource(teamImages[position])
+            Picasso.get().load(teamImages[position]).into(teamImageView)
             teamNameTv.text = teamNames[position]
         }
 

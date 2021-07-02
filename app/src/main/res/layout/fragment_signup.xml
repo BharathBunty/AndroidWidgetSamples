@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".textinputlayout.SignupFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameTextField"
+        style ="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_marginTop="32dp"
+        app:errorEnabled="true"
+        app:helperText="Required*"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/ic_name_24"
+        app:helperTextTextColor="?attr/colorOnBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/nameEditText"
+            android:hint="Enter Your Name"
+            android:imeOptions="actionNext"
+            android:inputType="textPersonName"
+            android:textColor="?attr/colorOnBackground"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/numberTextField"
+        style ="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_marginTop="16dp"
+        app:helperText="Required*"
+        app:endIconMode="clear_text"
+        app:prefixText="+91"
+        app:counterEnabled="true"
+        app:counterMaxLength="10"
+        app:startIconDrawable="@drawable/ic_mobile_24"
+        app:helperTextTextColor="?attr/colorOnBackground"
+        app:layout_constraintStart_toStartOf="@id/nameTextField"
+        app:layout_constraintTop_toBottomOf="@id/nameTextField" >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/numberEditText"
+            android:hint="Enter Your Number"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="10"
+            android:textColor="?attr/colorOnBackground"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/emailTextField"
+        style ="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_marginTop="16dp"
+        app:errorEnabled="true"
+        app:helperText="Optional"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/ic_email_24"
+        app:endIconDrawable="@drawable/ic_clear_24"
+        app:helperTextTextColor="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="@id/numberTextField"
+        app:layout_constraintTop_toBottomOf="@id/numberTextField">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/emailEditText"
+            android:hint="Enter Your Email"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:textColor="?attr/colorOnBackground"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/passwordTextField"
+        style ="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_marginTop="16dp"
+        app:errorEnabled="true"
+        app:helperText="Required*"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/ic_password_24"
+        app:passwordToggleEnabled="true"
+        app:helperTextTextColor="?attr/colorOnBackground"
+        app:layout_constraintStart_toStartOf="@id/emailTextField"
+        app:layout_constraintTop_toBottomOf="@id/emailTextField">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/passwordEditText"
+            android:hint="Enter Your Password"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:textColor="?attr/colorOnBackground"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cnfmPasswordTextField"
+        style ="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_marginTop="16dp"
+        app:errorEnabled="true"
+        app:helperText="Required*"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/ic_password_24"
+        app:passwordToggleEnabled="true"
+        app:helperTextTextColor="?attr/colorOnBackground"
+        app:layout_constraintStart_toStartOf="@id/passwordTextField"
+        app:layout_constraintTop_toBottomOf="@id/passwordTextField">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cnfmPasswordEditText"
+            android:hint="Confirm Your Password"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:textColor="?attr/colorOnBackground"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonCreate"
+        android:text="Create Account"
+        android:padding="12dp"
+        android:layout_marginTop="32dp"
+        app:cornerRadius="30dp"
+        app:iconGravity="textStart"
+        app:layout_constraintStart_toStartOf="@id/cnfmPasswordTextField"
+        app:layout_constraintTop_toBottomOf="@id/cnfmPasswordTextField"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
